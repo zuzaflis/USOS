@@ -46,9 +46,11 @@
       <AnchorPane prefHeight="637.0" prefWidth="251.0" style="-fx-background-color: #cfbfab;" BorderPane.alignment="CENTER">
          <children>
             <Button fx:id="gradesButton" layoutX="11.0" layoutY="49.0" mnemonicParsing="false" onAction="#showGrades" prefHeight="48.0" prefWidth="224.0" style="-fx-background-color: #e6cba8;" text="GRADES" />
-            <Button layoutX="11.0" layoutY="116.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="224.0" style="-fx-background-color: #e6cba8;" text="SUBJECTS" />
-            <Button layoutX="11.0" layoutY="188.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="224.0" style="-fx-background-color: #e6cba8;" text="GROUPS" />
-            <Button layoutX="11.0" layoutY="261.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="224.0" style="-fx-background-color: #e6cba8;" text="SCHEDULE" />
+            <Button fx:id="subjectsButton" layoutX="11.0" layoutY="116.0" mnemonicParsing="false" onAction="#showSubjects" prefHeight="48.0" prefWidth="224.0" style="-fx-background-color: #e6cba8;" text="SUBJECTS" />
+            <Button fx:id="groupsButton" layoutX="11.0" layoutY="188.0" mnemonicParsing="false" onAction="#showGroups" prefHeight="48.0" prefWidth="224.0" style="-fx-background-color: #e6cba8;" text="GROUPS" />
+            <Button fx:id="scheduleButton" layoutX="11.0" layoutY="261.0" mnemonicParsing="false" onAction="#showSchedule" prefHeight="48.0" prefWidth="224.0" style="-fx-background-color: #e6cba8;" text="SCHEDULE" />
+            <Button fx:id="mySubjectsButton" layoutX="11.0" layoutY="330.0" mnemonicParsing="false" onAction="#showMySubjects" prefHeight="48.0" prefWidth="224.0" style="-fx-background-color: #e6cba8;" text="MY SUBJECTS" />
+            <Button fx:id="myDataButton" layoutX="11.0" layoutY="400.0" mnemonicParsing="false" onAction="#showMyData" prefHeight="48.0" prefWidth="224.0" style="-fx-background-color: #e6cba8;" text="DATA" />
          </children></AnchorPane>
    </left>
    <right>

@@ -1,14 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.example.usos.GradesPane"
-            prefHeight="400.0" prefWidth="600.0">
 
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.usos.GradesPane">
+   <children>
+      <ChoiceBox fx:id="SubjectsList" layoutX="210.0" layoutY="14.0" prefHeight="25.0" prefWidth="277.0" />
+      <Label layoutX="14.0" layoutY="6.0" prefHeight="41.0" prefWidth="323.0" text="Wyświetl oceny z przedmiotu:" />
+      <Button fx:id="resetButton" layoutX="513.0" layoutY="14.0" mnemonicParsing="false" onAction="#onReset" text="Reset" />
+      <Pane layoutX="37.0" layoutY="64.0" prefHeight="312.0" prefWidth="521.0">
+         <children>
+            <ListView fx:id="GradesList" layoutX="14.0" layoutY="12.0" prefHeight="289.0" prefWidth="316.0">
+               <contextMenu>
+                  <ContextMenu>
+                    <items>
+                      <MenuItem mnemonicParsing="false" text="Unspecified Action" />
+                    </items>
+                  </ContextMenu>
+               </contextMenu>
+            </ListView>
+         </children>
+      </Pane>
+   </children>
 </AnchorPane>

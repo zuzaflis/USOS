@@ -4,8 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0da78558-4a79-4c0a-8273-66e47e7afc8c" name="Changes" comment="działajaca wersja">
+    <list default="true" id="0da78558-4a79-4c0a-8273-66e47e7afc8c" name="Changes" comment="it works!!!!">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/usos/StudentMethods/Subject.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/usos/SubjectsPaneController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/usos/SubjectsPane.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/usos/GradesPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/usos/GradesPane.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/usos/StudentDashboard/StudentHomepageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/usos/StudentDashboard/StudentHomepageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/usos/GradesPane.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/usos/GradesPane.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/usos/studentHomepage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/usos/studentHomepage.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,7 +101,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682284805749</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="it works!!!!">
+      <created>1682285330229</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1682285330229</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -112,7 +126,8 @@
     <MESSAGE value="added new adminHomepage" />
     <MESSAGE value="added user data" />
     <MESSAGE value="działajaca wersja" />
-    <option name="LAST_COMMIT_MESSAGE" value="działajaca wersja" />
+    <MESSAGE value="it works!!!!" />
+    <option name="LAST_COMMIT_MESSAGE" value="it works!!!!" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

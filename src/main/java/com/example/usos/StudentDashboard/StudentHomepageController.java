@@ -23,6 +23,8 @@ public class StudentHomepageController {
     @FXML private Label usernameLabel;
     @FXML private Label usernameLabel1;
 
+    //------------------------------------
+
     //----------------------
     @FXML
     private void changeNodes(String fxml) throws IOException {
@@ -39,6 +41,10 @@ public class StudentHomepageController {
     }
 
     //---------------------------------------------------
+    public void showSubjects(ActionEvent actionEvent) throws IOException {
+        changeNodes("com/example/usos/SubjectsPane.fxml");
+    }
+    //-----------------------------------------------
     public void initialize(){
         String username = UserData.getInstance().getUsername();
         usernameLabel.setText(username);
@@ -51,4 +57,15 @@ public class StudentHomepageController {
 
     }
 
+    public void showGroups(ActionEvent actionEvent) {
+    }
+
+    public void showSchedule(ActionEvent actionEvent) {
+    }
+
+    public void showMySubjects(ActionEvent actionEvent) {
+    }
+
+    public void showMyData(ActionEvent actionEvent) {
+    }
 }
