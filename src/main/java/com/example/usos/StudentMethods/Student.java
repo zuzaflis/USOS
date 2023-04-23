@@ -1,5 +1,8 @@
 package com.example.usos.StudentMethods;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+
 public class Student implements Comparable<Student>{
     private String name;
     private String lastName;
@@ -7,6 +10,11 @@ public class Student implements Comparable<Student>{
     private Integer yearOfBirth;
     private String albumNumber;
     private double points;
+    private ObservableList<Subject> subjects = FXCollections.observableArrayList();
+
+    public ObservableList<Subject> getSubjects() {
+        return subjects;
+    }
 
     public Integer getYearOfBirth() {
         return yearOfBirth;

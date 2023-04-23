@@ -9,15 +9,15 @@
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.usos.SubjectsPaneController">
    <children>
-      <TableView layoutX="26.0" layoutY="74.0" prefHeight="249.0" prefWidth="562.0">
+      <TableView fx:id="tableView" layoutX="26.0" layoutY="74.0" prefHeight="249.0" prefWidth="562.0">
         <columns>
-          <TableColumn prefWidth="142.0" text="Name" />
-          <TableColumn prefWidth="149.0" text="Number of Students" />
-            <TableColumn prefWidth="129.0" text="Max Students" />
-            <TableColumn prefWidth="141.0" text="Teacher's name" />
+          <TableColumn fx:id="nameColumn" prefWidth="142.0" text="Name" />
+          <TableColumn fx:id="numberOfStudentsColumn" prefWidth="149.0" text="Number of Students" />
+            <TableColumn fx:id="maxNumberOfStudentsColumn" prefWidth="129.0" text="Max Students" />
+            <TableColumn fx:id="professorNameColumn" prefWidth="141.0" text="Professor's name" />
         </columns>
       </TableView>
-      <Button fx:id="addSubjectButton" layoutX="50.0" layoutY="337.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="106.0" text="Add Subject" />
+      <Button fx:id="addSubjectButton" layoutX="50.0" layoutY="337.0" mnemonicParsing="false" onAction="#onAddSubjects" prefHeight="35.0" prefWidth="106.0" text="Add Subject" />
       <TextField fx:id="filterField" layoutX="29.0" layoutY="24.0" />
       <Button fx:id="searchButton" layoutX="212.0" layoutY="24.0" mnemonicParsing="false" text="Search" />
    </children>

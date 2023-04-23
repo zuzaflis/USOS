@@ -63,7 +63,8 @@ public class StudentHomepageController {
     public void showSchedule(ActionEvent actionEvent) {
     }
 
-    public void showMySubjects(ActionEvent actionEvent) {
+    public void showMySubjects(ActionEvent actionEvent) throws IOException {
+        changeNodes("com/example/usos/mySubjectsPane.fxml");
     }
 
     public void showMyData(ActionEvent actionEvent) {
