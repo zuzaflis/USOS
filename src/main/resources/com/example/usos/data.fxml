@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.usos.DataController">
+   <children>
+      <Label layoutX="184.0" layoutY="28.0" prefHeight="31.0" prefWidth="82.0" text="First Name:" />
+      <Label layoutX="184.0" layoutY="66.0" prefHeight="31.0" prefWidth="82.0" text="Last Name:" />
+      <Label layoutX="184.0" layoutY="105.0" prefHeight="31.0" prefWidth="111.0" text="Album Number:" />
+      <Label layoutX="184.0" layoutY="142.0" prefHeight="31.0" prefWidth="111.0" text="Year Of Birth" />
+      <Label layoutX="184.0" layoutY="185.0" prefHeight="31.0" prefWidth="111.0" text="Username:" />
+      <Label fx:id="nameLabel" layoutX="312.0" layoutY="32.0" prefHeight="23.0" prefWidth="90.0" text="Label" />
+      <Label fx:id="lastNameLabel" layoutX="312.0" layoutY="70.0" prefHeight="23.0" prefWidth="90.0" text="Label" />
+      <Label fx:id="albumLabel" layoutX="312.0" layoutY="109.0" prefHeight="23.0" prefWidth="90.0" text="Label" />
+      <Label fx:id="yearLabel" layoutX="312.0" layoutY="146.0" prefHeight="23.0" prefWidth="90.0" text="Label" />
+      <Label fx:id="usernameLabel" layoutX="312.0" layoutY="189.0" prefHeight="23.0" prefWidth="90.0" text="Label" />
+   </children>
+</AnchorPane>

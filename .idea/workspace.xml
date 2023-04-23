@@ -4,14 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0da78558-4a79-4c0a-8273-66e47e7afc8c" name="Changes" comment="added grades Pane">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/usos/MySubjectsPaneController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/usos/mySubjectsPane.fxml" afterDir="false" />
+    <list default="true" id="0da78558-4a79-4c0a-8273-66e47e7afc8c" name="Changes" comment="added subjects pane">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/usos/DataController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/usos/data.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/usos/StudentDashboard/StudentHomepageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/usos/StudentDashboard/StudentHomepageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/usos/StudentMethods/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/usos/StudentMethods/Student.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/usos/SubjectsPaneController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/usos/SubjectsPaneController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/usos/SubjectsPane.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/usos/SubjectsPane.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,7 +111,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682288048824</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="added subjects pane">
+      <created>1682290636726</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1682290636726</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -134,7 +138,8 @@
     <MESSAGE value="działajaca wersja" />
     <MESSAGE value="it works!!!!" />
     <MESSAGE value="added grades Pane" />
-    <option name="LAST_COMMIT_MESSAGE" value="added grades Pane" />
+    <MESSAGE value="added subjects pane" />
+    <option name="LAST_COMMIT_MESSAGE" value="added subjects pane" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
