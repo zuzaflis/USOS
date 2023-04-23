@@ -1,14 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="$CONTROLLER_NAME$"
-            prefHeight="400.0" prefWidth="600.0" >
-
-</AnchorPane>
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.usos.AdminHomepageController">
+<left>
+    <AnchorPane prefHeight="569.0" prefWidth="251.0" BorderPane.alignment="CENTER" />
+</left>
+<top>
+    <ImageView blendMode="DARKEN" fitHeight="94.0" fitWidth="214.0" pickOnBounds="true" preserveRatio="true" style="-fx-background-color: #000000;" BorderPane.alignment="TOP_LEFT">
+        <image>
+            <Image url="@../../../../../../../../../Users/T14/Desktop/usoslogo1_plain_white_4000.gif" />
+        </image>
+    </ImageView>
+</top>
+<center>
+    <TableView fx:id="tableView" prefHeight="601.0" prefWidth="689.0" BorderPane.alignment="CENTER">
+        <columns>
+            <TableColumn fx:id="nameColumn" prefWidth="75.0" text="Name" />
+            <TableColumn fx:id="lastNameColumn" prefWidth="75.0" text="Last Name" />
+            <TableColumn fx:id="yearColumn" prefWidth="75.0" text="Year" />
+            <TableColumn fx:id="albumColumn" prefWidth="102.0" text="Album Number" />
+            <TableColumn fx:id="pointsColumn" prefWidth="73.0" text="ECTS" />
+            <TableColumn fx:id="studentConditionColumn" prefWidth="105.0" text="Condition" />
+        </columns>
+    </TableView>
+</center>
+<right>
+    <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+</right>
+<bottom>
+    <BorderPane prefHeight="58.0" prefWidth="1070.0" BorderPane.alignment="CENTER">
+        <right>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                <children>
+                    <Button fx:id="logOut" alignment="CENTER" layoutX="52.0" layoutY="14.0" mnemonicParsing="false" onAction="#logOut" prefHeight="40.0" prefWidth="115.0" style="-fx-background-color: #e6b16c;" text="Log Out" />
+                </children>
+            </AnchorPane>
+        </right></BorderPane>
+</bottom>
+</BorderPane>
