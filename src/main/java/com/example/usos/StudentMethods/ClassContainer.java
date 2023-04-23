@@ -1,4 +1,4 @@
-package com.example.usos.students;
+package com.example.usos.StudentMethods;
 
 import java.util.ArrayList;
 import java.util.HashMap;

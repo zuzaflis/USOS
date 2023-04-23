@@ -4,22 +4,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0da78558-4a79-4c0a-8273-66e47e7afc8c" name="Changes" comment="">
+    <list default="true" id="0da78558-4a79-4c0a-8273-66e47e7afc8c" name="Changes" comment="added new adminHomepage">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/usos/Proba.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/usos/StudentDashboard/GradesStudentController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/usos/StudentDashboard/UserData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/usos/proba.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/usos/studentGrades.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/usos/AdminHomepageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/usos/AdminHomepageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/usos/AdminHomepageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/usos/AdminDashboard/AdminHomepageController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/usos/LogInController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/usos/LogInController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/usos/MainApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/usos/MainApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/usos/StudentHomepageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/usos/StudentHomepageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/usos/students/ClassContainer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/usos/students/ClassContainer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/usos/students/Comparable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/usos/students/Comparable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/usos/students/Group.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/usos/students/Group.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/usos/students/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/usos/students/Student.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/usos/students/StudentCondition.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/usos/students/StudentCondition.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/usos/StudentHomepageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/usos/StudentDashboard/StudentHomepageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/usos/students/ClassContainer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/usos/StudentMethods/ClassContainer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/usos/students/Comparable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/usos/StudentMethods/Comparable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/usos/students/Group.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/usos/StudentMethods/Group.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/usos/students/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/usos/StudentMethods/Student.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/usos/students/StudentCondition.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/usos/StudentMethods/StudentCondition.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/usos/adminHomepage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/usos/adminHomepage.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/usos/hello-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/usos/hello-view.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/usos/logIn.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/usos/logIn.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/usos/hello-view.fxml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/usos/studentHomepage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/usos/studentHomepage.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -30,8 +32,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="FxmlFile" />
         <option value="Interface" />
+        <option value="FxmlFile" />
         <option value="Class" />
       </list>
     </option>
@@ -64,13 +66,16 @@
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
+    "run.code.analysis.last.selected.profile": "pProject Default",
     "settings.editor.selected.configurable": "preferences.JavaFX"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\openjdk-19.0.2_windows-x64_bin\jdk-19.0.2\USOS\src\main\images" />
       <recent name="C:\openjdk-19.0.2_windows-x64_bin\jdk-19.0.2\USOS\src\main\resources\com\example\usos" />
+      <recent name="C:\openjdk-19.0.2_windows-x64_bin\jdk-19.0.2\USOS\src\main\resources\com\example\usos\AdminDashboard" />
+      <recent name="C:\openjdk-19.0.2_windows-x64_bin\jdk-19.0.2\USOS\src\main\resources\com\example\usos\StudentDashboard" />
+      <recent name="C:\openjdk-19.0.2_windows-x64_bin\jdk-19.0.2\USOS\src\main\images" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -82,10 +87,27 @@
       <option name="presentableId" value="Default" />
       <updated>1681942374317</updated>
     </task>
+    <task id="LOCAL-00001" summary="added new adminHomepage">
+      <created>1682277489506</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1682277489506</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="added new adminHomepage" />
+    <option name="LAST_COMMIT_MESSAGE" value="added new adminHomepage" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
     <select />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/USOS$MainApp.ic" NAME="MainApp Coverage Results" MODIFIED="1682281542001" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.example.usos.*</FILTER>
+    </SUITE>
   </component>
 </project>

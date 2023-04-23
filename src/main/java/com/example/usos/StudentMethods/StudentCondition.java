@@ -1,4 +1,4 @@
-package com.example.usos.students;
+package com.example.usos.StudentMethods;
 
 public enum StudentCondition {
     CATCH_UP("catch-up"),

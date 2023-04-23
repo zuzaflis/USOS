@@ -1,5 +1,8 @@
 package com.example.usos;
 
+import com.example.usos.StudentDashboard.UserData;
+import com.example.usos.StudentMethods.Student;
+import com.example.usos.StudentMethods.StudentCondition;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -34,6 +37,14 @@ public class LogInController {
             m.changeScene("adminHomepage.fxml",1280,800);
         } else if (username.getText().toString().equals("student") && password.getText().toString().equals("student")){
             wrongInput.setText("Success");
+
+            String usernameText = username.getText();
+           //String passwordText = password.getText();
+
+            UserData.getInstance().setUsername(usernameText);
+           // UserData.getInstance().setPassword(passwordText);
+            Student student = new Student("Zuzanna", "Flis", StudentCondition.PRESENT,2002, 305.0, "3098762");
+            UserData.getInstance().setStudent(student);
 
             m.changeScene("studentHomepage.fxml",1280,800);
         } else {

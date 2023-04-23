@@ -1,7 +1,8 @@
-package com.example.usos;
+package com.example.usos.AdminDashboard;
 
-import com.example.usos.students.Student;
-import com.example.usos.students.StudentCondition;
+import com.example.usos.MainApp;
+import com.example.usos.StudentMethods.Student;
+import com.example.usos.StudentMethods.StudentCondition;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;

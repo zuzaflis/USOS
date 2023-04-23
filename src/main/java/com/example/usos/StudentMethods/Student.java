@@ -1,4 +1,4 @@
-package com.example.usos.students;
+package com.example.usos.StudentMethods;
 
 public class Student implements Comparable<Student>{
     private String name;
