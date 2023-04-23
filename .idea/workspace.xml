@@ -4,24 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0da78558-4a79-4c0a-8273-66e47e7afc8c" name="Changes" comment="added new adminHomepage">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/usos/Proba.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/usos/StudentDashboard/GradesStudentController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/usos/StudentDashboard/UserData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/usos/proba.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/usos/studentGrades.fxml" afterDir="false" />
+    <list default="true" id="0da78558-4a79-4c0a-8273-66e47e7afc8c" name="Changes" comment="added user data">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/usos/GradesPane.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/usos/GradesPane.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/usos/AdminHomepageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/usos/AdminDashboard/AdminHomepageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/usos/LogInController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/usos/LogInController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/usos/StudentHomepageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/usos/StudentDashboard/StudentHomepageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/usos/students/ClassContainer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/usos/StudentMethods/ClassContainer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/usos/students/Comparable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/usos/StudentMethods/Comparable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/usos/students/Group.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/usos/StudentMethods/Group.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/usos/students/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/usos/StudentMethods/Student.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/usos/students/StudentCondition.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/usos/StudentMethods/StudentCondition.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/usos/adminHomepage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/usos/adminHomepage.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/usos/hello-view.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/usos/Proba.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/usos/StudentDashboard/GradesStudentController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/usos/StudentDashboard/StudentHomepageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/usos/StudentDashboard/StudentHomepageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/usos/proba.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/usos/studentGrades.fxml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/usos/studentHomepage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/usos/studentHomepage.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -57,25 +48,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_directory_selection": "C:/openjdk-19.0.2_windows-x64_bin/jdk-19.0.2/USOS/src/main/java/com/example/usos",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "preferences.JavaFX"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;last_directory_selection&quot;: &quot;C:/openjdk-19.0.2_windows-x64_bin/jdk-19.0.2/USOS/src/main/java/com/example/usos&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.JavaFX&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\openjdk-19.0.2_windows-x64_bin\jdk-19.0.2\USOS\src\main\resources\com\example\usos" />
       <recent name="C:\openjdk-19.0.2_windows-x64_bin\jdk-19.0.2\USOS\src\main\resources\com\example\usos\AdminDashboard" />
       <recent name="C:\openjdk-19.0.2_windows-x64_bin\jdk-19.0.2\USOS\src\main\resources\com\example\usos\StudentDashboard" />
       <recent name="C:\openjdk-19.0.2_windows-x64_bin\jdk-19.0.2\USOS\src\main\images" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.example.usos" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -94,12 +88,31 @@
       <option name="project" value="LOCAL" />
       <updated>1682277489506</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="added user data">
+      <created>1682282327996</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1682282327996</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="added new adminHomepage" />
-    <option name="LAST_COMMIT_MESSAGE" value="added new adminHomepage" />
+    <MESSAGE value="added user data" />
+    <option name="LAST_COMMIT_MESSAGE" value="added user data" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

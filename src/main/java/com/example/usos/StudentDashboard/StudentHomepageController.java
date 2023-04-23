@@ -8,8 +8,11 @@ import javafx.scene.Node;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.Pane;
 
 import java.io.IOException;
+import java.io.InputStream;
+
 public class StudentHomepageController {
     @FXML private Button logOut;
     @FXML private AnchorPane anchorPane;
@@ -18,18 +21,15 @@ public class StudentHomepageController {
 
     //----------------------
     @FXML
-    private void changeNodes(String fxml) throws IOException {
-        FXMLLoader loader = FXMLLoader.load(getClass().getResource(fxml));
-        AnchorPane newAnchorPane = loader.load();
+    private void changeNodes() throws IOException {
         Node newNode1 = new Label("New label 1");
         anchorPane.getChildren().clear();
-        //anchorPane.getChildren().addAll(newNode1);
-        anchorPane.getChildren().add(newAnchorPane);
+        anchorPane.getChildren().addAll(newNode1);
 
     }
     //-----------------------------------------------------
     public void showGrades(ActionEvent actionEvent) throws IOException {
-        changeNodes("/studentGrades.fxml");
+        changeNodes();
     }
 
     //---------------------------------------------------
