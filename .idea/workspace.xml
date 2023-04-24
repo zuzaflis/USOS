@@ -4,11 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0da78558-4a79-4c0a-8273-66e47e7afc8c" name="Changes" comment="added subjects pane">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/usos/DataController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/usos/data.fxml" afterDir="false" />
+    <list default="true" id="0da78558-4a79-4c0a-8273-66e47e7afc8c" name="Changes" comment="added dataPane">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/usos/ChangeInfoDialogController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/usos/changeInfoDialog.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/usos/StudentDashboard/StudentHomepageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/usos/StudentDashboard/StudentHomepageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/usos/DataController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/usos/DataController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/usos/StudentDashboard/UserData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/usos/StudentDashboard/UserData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/usos/data.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/usos/data.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,6 +39,9 @@
       </MavenImportingSettings>
     </option>
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="ProjectErrors" />
+  </component>
   <component name="ProjectId" id="2OfChw8zzURIRXXhtqCPQxwEwRB" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -49,6 +54,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;last_directory_selection&quot;: &quot;C:/openjdk-19.0.2_windows-x64_bin/jdk-19.0.2/USOS/src/main/java/com/example/usos&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/openjdk-19.0.2_windows-x64_bin/jdk-19.0.2/USOS/src/main/images&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
@@ -57,6 +63,9 @@
   }
 }</component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\openjdk-19.0.2_windows-x64_bin\jdk-19.0.2\USOS\src\main\images" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\openjdk-19.0.2_windows-x64_bin\jdk-19.0.2\USOS\src\main\resources\com\example\usos" />
       <recent name="C:\openjdk-19.0.2_windows-x64_bin\jdk-19.0.2\USOS\src\main\resources\com\example\usos\AdminDashboard" />
@@ -118,7 +127,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682290636726</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="added dataPane">
+      <created>1682291902841</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1682291902841</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -139,7 +155,8 @@
     <MESSAGE value="it works!!!!" />
     <MESSAGE value="added grades Pane" />
     <MESSAGE value="added subjects pane" />
-    <option name="LAST_COMMIT_MESSAGE" value="added subjects pane" />
+    <MESSAGE value="added dataPane" />
+    <option name="LAST_COMMIT_MESSAGE" value="added dataPane" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

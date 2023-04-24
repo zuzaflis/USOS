@@ -5,6 +5,7 @@ import com.example.usos.StudentMethods.Student;
 public class UserData {
     private static final UserData INSTANCE = new UserData();
 
+
     private String username;
     private String password;
     private Student student;
@@ -39,5 +40,9 @@ public class UserData {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+    public void updateStudent(Student student) {
+        UserData.getInstance().setStudent(student);
+
     }
 }

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
-
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.usos.DataController">
    <children>
@@ -16,5 +16,6 @@
       <Label fx:id="albumLabel" layoutX="312.0" layoutY="109.0" prefHeight="23.0" prefWidth="90.0" text="Label" />
       <Label fx:id="yearLabel" layoutX="312.0" layoutY="146.0" prefHeight="23.0" prefWidth="90.0" text="Label" />
       <Label fx:id="usernameLabel" layoutX="312.0" layoutY="189.0" prefHeight="23.0" prefWidth="90.0" text="Label" />
+      <Button fx:id="changeInfoButton" layoutX="260.0" layoutY="305.0" mnemonicParsing="false" onAction="#onChangeInfo" prefHeight="38.0" prefWidth="90.0" text="Change Info" />
    </children>
 </AnchorPane>
