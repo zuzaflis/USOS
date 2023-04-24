@@ -12,10 +12,15 @@ public class Student implements Comparable<Student>{
     private double points;
     private ObservableList<Subject> subjects = FXCollections.observableArrayList();
 
+
     public ObservableList<Subject> getSubjects() {
         return subjects;
     }
 
+    public void addGrade(Subject subject, double value, double weight){
+        Grade grade = new Grade(value, weight);
+        subject.addGrade(grade);
+    }
     public Integer getYearOfBirth() {
         return yearOfBirth;
     }

@@ -2,6 +2,8 @@ package com.example.usos.StudentDashboard;
 
 import com.example.usos.StudentMethods.Student;
 
+import java.util.List;
+
 public class UserData {
     private static final UserData INSTANCE = new UserData();
 
@@ -9,6 +11,7 @@ public class UserData {
     private String username;
     private String password;
     private Student student;
+    private List<Double> grades;
     private UserData() {}
     public String getUsername() {
         return username;

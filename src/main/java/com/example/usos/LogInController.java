@@ -42,9 +42,12 @@ public class LogInController {
            //String passwordText = password.getText();
 
             UserData.getInstance().setUsername(usernameText);
-           // UserData.getInstance().setPassword(passwordText);
+
             Student student = new Student("Zuzanna", "Flis", StudentCondition.PRESENT,2002, 305.0, "3098762");
             UserData.getInstance().setStudent(student);
+            GradesPane gradesPane = new GradesPane();
+            gradesPane.generateGrades();
+
 
             m.changeScene("studentHomepage.fxml",1280,800);
         } else {

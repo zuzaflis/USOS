@@ -25,6 +25,8 @@ public class SubjectsPaneController implements Initializable {
         Subject selectedSubject = tableView.getSelectionModel().getSelectedItem();
         if (selectedSubject != null) {
             UserData.getInstance().getStudent().getSubjects().add(selectedSubject);
+            UserData.getInstance().getStudent().addGrade(selectedSubject,0,0);
+            selectedSubject.setNumberOfStudents(selectedSubject.getNumberOfStudents()+1);
         }
     }
 

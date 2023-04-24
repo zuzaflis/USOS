@@ -9,7 +9,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 
-
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.usos.GradesPane">
    <children>
       <ChoiceBox fx:id="SubjectsList" layoutX="210.0" layoutY="14.0" prefHeight="25.0" prefWidth="277.0" />
@@ -17,7 +16,7 @@
       <Button fx:id="resetButton" layoutX="513.0" layoutY="14.0" mnemonicParsing="false" onAction="#onReset" text="Reset" />
       <Pane layoutX="37.0" layoutY="64.0" prefHeight="312.0" prefWidth="521.0">
          <children>
-            <ListView fx:id="GradesList" layoutX="14.0" layoutY="12.0" prefHeight="289.0" prefWidth="316.0">
+            <ListView fx:id="mySubjects" layoutX="14.0" layoutY="12.0" prefHeight="289.0" prefWidth="316.0">
                <contextMenu>
                   <ContextMenu>
                     <items>
