@@ -57,10 +57,12 @@ public class StudentHomepageController {
 
     }
 
-    public void showGroups(ActionEvent actionEvent) {
+    public void showGroups(ActionEvent actionEvent) throws IOException {
+        changeNodes("com/example/usos/groupsPane.fxml");
     }
 
-    public void showSchedule(ActionEvent actionEvent) {
+    public void showSchedule(ActionEvent actionEvent) throws IOException {
+        changeNodes("com/example/usos/schedulePane.fxml");
     }
 
     public void showMySubjects(ActionEvent actionEvent) throws IOException {

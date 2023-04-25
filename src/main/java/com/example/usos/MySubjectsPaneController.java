@@ -19,6 +19,7 @@ public class MySubjectsPaneController implements Initializable {
     @FXML private TableColumn<Subject, Integer> numberOfStudentsColumn;
     @FXML private TableColumn<Subject, String> professorNameColumn;
 
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         nameColumn.setCellValueFactory(new PropertyValueFactory<Subject,String>("subjectName"));
@@ -33,5 +34,12 @@ public class MySubjectsPaneController implements Initializable {
 
     public void onRefresh(ActionEvent actionEvent) {
         refreshTable();
+    }
+
+    public void onRemoveButton(ActionEvent actionEvent) {
+        Subject selectedSubject = tableView.getSelectionModel().getSelectedItem();
+        if(selectedSubject!= null){
+            UserData.getInstance().getStudent().getSubjects().remove(selectedSubject);
+        }
     }
 }

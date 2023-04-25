@@ -4,14 +4,18 @@ import com.example.usos.StudentDashboard.UserData;
 import com.example.usos.StudentMethods.Subject;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.collections.transformation.FilteredList;
+import javafx.collections.transformation.SortedList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 
 import java.net.URL;
+import java.util.Locale;
 import java.util.ResourceBundle;
 
 public class SubjectsPaneController implements Initializable {
@@ -20,6 +24,7 @@ public class SubjectsPaneController implements Initializable {
     @FXML private TableColumn<Subject, Integer> numberOfStudentsColumn;
     @FXML private TableColumn<Subject, Integer> maxNumberOfStudentsColumn;
     @FXML private TableColumn<Subject, String> professorNameColumn;
+    @FXML private TextField searchField;
 
     public void onAddSubjects(ActionEvent actionEvent) {
         Subject selectedSubject = tableView.getSelectionModel().getSelectedItem();
@@ -40,6 +45,35 @@ public class SubjectsPaneController implements Initializable {
         maxNumberOfStudentsColumn.setCellValueFactory(new PropertyValueFactory<Subject,Integer>("maxNumberOfStudents"));
         professorNameColumn.setCellValueFactory(new PropertyValueFactory<Subject,String>("TeacherName"));
         tableView.setItems(generateSubjects());
+
+        FilteredList<Subject> filteredData = new FilteredList<>(generateSubjects(), b-> true);
+
+        searchField.textProperty().addListener((observable, oldValue, newValue) -> {
+            filteredData.setPredicate( subject -> {
+
+                if(newValue == null || newValue.isEmpty()){
+                    return true;
+                }
+                String lowerCaseFilter = newValue.toLowerCase();
+
+                if(subject.getSubjectName().toLowerCase().indexOf(lowerCaseFilter) != -1){
+                    return true;
+                } else if( subject.getTeacherName().toLowerCase().indexOf(lowerCaseFilter) != -1){
+                    return true;
+                }
+                else if( String.valueOf(subject.getNumberOfStudents()).indexOf(lowerCaseFilter) != -1){
+                    return true;
+                }
+                return false; //doesn't match
+            });
+        });
+        SortedList<Subject> sortedData = new SortedList<>(filteredData);
+
+        sortedData.comparatorProperty().bind(tableView.comparatorProperty());
+        tableView.setItems(sortedData);
+
+
+
     }
     //----------------------------------------------------------
     private ObservableList<Subject> generateSubjects(){
@@ -60,5 +94,6 @@ public class SubjectsPaneController implements Initializable {
 
 
     public void onSearch(ActionEvent actionEvent) {
+
     }
 }
