@@ -4,15 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0da78558-4a79-4c0a-8273-66e47e7afc8c" name="Changes" comment="added data dialog and crud">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/usos/StudentMethods/Grade.java" afterDir="false" />
+    <list default="true" id="0da78558-4a79-4c0a-8273-66e47e7afc8c" name="Changes" comment="added Grades avg">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/usos/GradesPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/usos/GradesPane.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/usos/LogInController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/usos/LogInController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/usos/StudentDashboard/UserData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/usos/StudentDashboard/UserData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/usos/StudentMethods/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/usos/StudentMethods/Student.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/usos/StudentMethods/Subject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/usos/StudentMethods/Subject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/usos/SubjectsPaneController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/usos/SubjectsPaneController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/usos/GradesPane.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/usos/GradesPane.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/usos/SubjectsPane.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/usos/SubjectsPane.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -143,7 +140,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682350163705</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="added Grades avg">
+      <created>1682373395160</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1682373395160</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -166,7 +170,8 @@
     <MESSAGE value="added subjects pane" />
     <MESSAGE value="added dataPane" />
     <MESSAGE value="added data dialog and crud" />
-    <option name="LAST_COMMIT_MESSAGE" value="added data dialog and crud" />
+    <MESSAGE value="added Grades avg" />
+    <option name="LAST_COMMIT_MESSAGE" value="added Grades avg" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -59,4 +59,6 @@ public class SubjectsPaneController implements Initializable {
     }
 
 
+    public void onSearch(ActionEvent actionEvent) {
+    }
 }

@@ -11,7 +11,7 @@
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.usos.GradesPane">
    <children>
-      <ChoiceBox fx:id="SubjectsList" layoutX="210.0" layoutY="14.0" prefHeight="25.0" prefWidth="277.0" />
+      <ChoiceBox fx:id="subjectChoice" layoutX="210.0" layoutY="14.0" prefHeight="25.0" prefWidth="277.0" />
       <Label layoutX="14.0" layoutY="6.0" prefHeight="41.0" prefWidth="323.0" text="Wyświetl oceny z przedmiotu:" />
       <Button fx:id="resetButton" layoutX="513.0" layoutY="14.0" mnemonicParsing="false" onAction="#onReset" text="Reset" />
       <Pane layoutX="37.0" layoutY="64.0" prefHeight="312.0" prefWidth="521.0">
@@ -25,6 +25,7 @@
                   </ContextMenu>
                </contextMenu>
             </ListView>
+            <Button fx:id="sortButton" layoutX="368.0" layoutY="21.0" mnemonicParsing="false" onAction="#onSort" prefHeight="25.0" prefWidth="69.0" text="Sort" />
          </children>
       </Pane>
    </children>
