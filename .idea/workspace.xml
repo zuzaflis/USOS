@@ -4,12 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0da78558-4a79-4c0a-8273-66e47e7afc8c" name="Changes" comment="added Grades avg">
+    <list default="true" id="0da78558-4a79-4c0a-8273-66e47e7afc8c" name="Changes" comment="added sorting grades">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/usos/GroupsPaneController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/usos/StudentDashboard/SchedulePaneController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/usos/groupsPane.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/usos/schedulePane.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/planzajec.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/planzajec.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/usos/GradesPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/usos/GradesPane.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/images/avatar.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/avatar.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/usos/MySubjectsPaneController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/usos/MySubjectsPaneController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/usos/StudentDashboard/StudentHomepageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/usos/StudentDashboard/StudentHomepageController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/usos/SubjectsPaneController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/usos/SubjectsPaneController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/usos/GradesPane.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/usos/GradesPane.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/usos/SubjectsPane.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/usos/SubjectsPane.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/usos/data.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/usos/data.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/usos/mySubjectsPane.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/usos/mySubjectsPane.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,25 +55,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;last_directory_selection&quot;: &quot;C:/openjdk-19.0.2_windows-x64_bin/jdk-19.0.2/USOS/src/main/java/com/example/usos&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/openjdk-19.0.2_windows-x64_bin/jdk-19.0.2/USOS/src/main/images&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.JavaFX&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "last_directory_selection": "C:/openjdk-19.0.2_windows-x64_bin/jdk-19.0.2/USOS/src/main/java/com/example/usos",
+    "last_opened_file_path": "C:/openjdk-19.0.2_windows-x64_bin/jdk-19.0.2/USOS/src/main/resources",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "preferences.JavaFX"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\openjdk-19.0.2_windows-x64_bin\jdk-19.0.2\USOS\src\main\resources" />
       <recent name="C:\openjdk-19.0.2_windows-x64_bin\jdk-19.0.2\USOS\src\main\images" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\openjdk-19.0.2_windows-x64_bin\jdk-19.0.2\USOS\src\main\resources" />
       <recent name="C:\openjdk-19.0.2_windows-x64_bin\jdk-19.0.2\USOS\src\main\resources\com\example\usos" />
       <recent name="C:\openjdk-19.0.2_windows-x64_bin\jdk-19.0.2\USOS\src\main\resources\com\example\usos\AdminDashboard" />
       <recent name="C:\openjdk-19.0.2_windows-x64_bin\jdk-19.0.2\USOS\src\main\resources\com\example\usos\StudentDashboard" />
@@ -147,7 +157,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682373395160</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="added sorting grades">
+      <created>1682421601762</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1682421601762</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -171,7 +188,8 @@
     <MESSAGE value="added dataPane" />
     <MESSAGE value="added data dialog and crud" />
     <MESSAGE value="added Grades avg" />
-    <option name="LAST_COMMIT_MESSAGE" value="added Grades avg" />
+    <MESSAGE value="added sorting grades" />
+    <option name="LAST_COMMIT_MESSAGE" value="added sorting grades" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
