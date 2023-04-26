@@ -32,6 +32,9 @@
   OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 -->
 
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.image.Image?>
@@ -93,7 +96,17 @@
                   <Font size="24.0" />
                </font>
             </Label>
-            <Pane fx:id="panedo" layoutX="166.0" layoutY="175.0" prefHeight="287.0" prefWidth="498.0" />
+            <Pane fx:id="panedo" layoutX="166.0" layoutY="175.0" prefHeight="287.0" prefWidth="498.0">
+               <children>
+                  <BarChart fx:id="avgGradesChart" layoutY="-50.0" stylesheets="@style.css" title="Your Average Grades:">
+                    <xAxis>
+                      <CategoryAxis side="BOTTOM" />
+                    </xAxis>
+                    <yAxis>
+                      <NumberAxis side="LEFT" />
+                    </yAxis>
+                  </BarChart>
+               </children></Pane>
          </children>
       </AnchorPane>
    </center>

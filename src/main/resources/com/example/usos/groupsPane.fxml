@@ -8,10 +8,10 @@
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.usos.GroupsPaneController">
    <children>
       <Label layoutX="48.0" layoutY="37.0" prefHeight="32.0" prefWidth="115.0" text="Twoje grupy:" />
-      <ListView layoutX="48.0" layoutY="77.0" prefHeight="200.0" prefWidth="200.0" />
-      <ListView layoutX="348.0" layoutY="77.0" prefHeight="200.0" prefWidth="200.0" />
+      <ListView fx:id="myGroups" layoutX="48.0" layoutY="77.0" prefHeight="200.0" prefWidth="200.0" />
+      <ListView fx:id="allGroups" layoutX="348.0" layoutY="77.0" prefHeight="200.0" prefWidth="200.0" />
       <Label layoutX="360.0" layoutY="40.0" prefHeight="25.0" prefWidth="115.0" text="Dostępne grupy: " />
-      <Button layoutX="348.0" layoutY="307.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="200.0" text="Add this group" />
-      <Button layoutX="56.0" layoutY="307.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="200.0" text="Remove this group" />
+      <Button layoutX="348.0" layoutY="307.0" mnemonicParsing="false" onAction="#onAddGroup" prefHeight="25.0" prefWidth="200.0" text="Add this group" />
+      <Button layoutX="56.0" layoutY="307.0" mnemonicParsing="false" onAction="#onRemoveGroup" prefHeight="25.0" prefWidth="200.0" text="Remove this group" />
    </children>
 </AnchorPane>

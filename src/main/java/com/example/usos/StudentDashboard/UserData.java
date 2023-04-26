@@ -1,5 +1,6 @@
 package com.example.usos.StudentDashboard;
 
+import com.example.usos.StudentMethods.Group;
 import com.example.usos.StudentMethods.Student;
 
 import java.util.List;
@@ -12,7 +13,26 @@ public class UserData {
     private String password;
     private Student student;
     private List<Double> grades;
+    private  List<Group> groups;
     private UserData() {}
+
+    public List<Double> getGrades() {
+        return grades;
+    }
+
+    public List<Group> getGroups() {
+        return groups;
+    }
+
+
+    public void setGrades(List<Double> grades) {
+        this.grades = grades;
+    }
+
+    public void setGroups(List<Group> groups) {
+        this.groups = groups;
+    }
+
     public String getUsername() {
         return username;
     }

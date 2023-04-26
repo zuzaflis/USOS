@@ -22,8 +22,10 @@ public class GradesPane implements Initializable {
     private ChoiceBox<Subject> subjectChoice;
 
     public void generateGrades(){
-        Subject subject7 = new Subject("MMNT", 20,15,"Angelika Chmiel");
-        Subject subject8 = new Subject("Algebra", 20,1,"Andrzej Zgred");
+        Subject subject7 = new Subject("MMNT", 20,15,"Magdalena Kaczmarek");
+        Subject subject8 = new Subject("Algebra", 20,1,"Karolina Zgred");
+        Subject subject9 = new Subject("Sieci Komputerowe", 20, 12, "Anna Kowalska");
+        Subject subject10 = new Subject("Nowoczesne Technologie", 20, 12, "Adam Nowak");
 
         UserData.getInstance().getStudent().addGrade(subject7,5.0,2.0);
         UserData.getInstance().getStudent().addGrade(subject7,4.0,2.5);
@@ -31,8 +33,16 @@ public class GradesPane implements Initializable {
         UserData.getInstance().getStudent().addGrade(subject8,4.0,2.0);
         UserData.getInstance().getStudent().addGrade(subject8,5.0,2.5);
 
+        UserData.getInstance().getStudent().addGrade(subject9,2.0,3.0);
+        UserData.getInstance().getStudent().addGrade(subject9,4.0,2.5);
+
+        UserData.getInstance().getStudent().addGrade(subject10,3.5,2.0);
+        UserData.getInstance().getStudent().addGrade(subject10,4.0,3.5);
+
         UserData.getInstance().getStudent().getSubjects().add(subject7);
         UserData.getInstance().getStudent().getSubjects().add(subject8);
+        UserData.getInstance().getStudent().getSubjects().add(subject9);
+        UserData.getInstance().getStudent().getSubjects().add(subject10);
     }
 
     public void onReset(ActionEvent actionEvent) {
@@ -50,6 +60,7 @@ public class GradesPane implements Initializable {
 
 
         subjectChoice.setItems(subjects);
+
         subjectChoice.getSelectionModel().selectedItemProperty().addListener((observable,oldValue,newValue) ->{
             if(newValue!= null){
                 mySubjects.getItems().setAll(newValue);

@@ -43,7 +43,7 @@ public class LogInController {
 
             UserData.getInstance().setUsername(usernameText);
 
-            Student student = new Student("Zuzanna", "Flis", StudentCondition.PRESENT,2002, 305.0, "3098762");
+            Student student = new Student("Zuzanna", "Flis", StudentCondition.PRESENT,2002, 305.0, "309872");
             UserData.getInstance().setStudent(student);
             GradesPane gradesPane = new GradesPane();
             gradesPane.generateGrades();

@@ -23,17 +23,16 @@ public class Group {
 
     @Override
     public String toString() {
-        return "Class{" +
-                "groupName='" + groupName + '\'' +
-                ", maxNumberOfStudents=" + maxNumberOfStudents +
-                ", listOfStudents=" + listOfStudents +
-                '}';
+        return  groupName;
     }
 
     public Group(String groupName, List<Student> listOfStudents, int maxNumberOfStudents) {
         this.groupName = groupName;
         this.listOfStudents = listOfStudents;
         this.maxNumberOfStudents = maxNumberOfStudents;
+    }
+    public void removeStudent(Student student) {
+        listOfStudents.remove(student);
     }
     public List<Student> getStudents(){
         return listOfStudents;

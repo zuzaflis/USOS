@@ -12,6 +12,12 @@ public class Student implements Comparable<Student>{
     private double points;
     private ObservableList<Subject> subjects = FXCollections.observableArrayList();
 
+private ObservableList<Group> groups = FXCollections.observableArrayList();
+
+    public ObservableList<Group> getGroups() {
+        return groups;
+    }
+
 
     public ObservableList<Subject> getSubjects() {
         return subjects;
@@ -80,14 +86,7 @@ public class Student implements Comparable<Student>{
 
     @Override
     public String toString() {
-        return "Student{" +
-                "name='" + name + '\'' +
-                ", lastName='" + lastName + '\'' +
-                ", studentCondition=" + studentCondition +
-                ", yearOfBirth=" + yearOfBirth +
-                ", points=" + points + ", AlbumNumber" +
-                albumNumber+
-                '}';
+        return name+ " " + lastName;
     }
 
     @Override

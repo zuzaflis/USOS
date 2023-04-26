@@ -2,11 +2,19 @@ package com.example.usos.StudentDashboard;
 
 import com.example.usos.GradesPane;
 import com.example.usos.MainApp;
+import com.example.usos.StudentMethods.Grade;
+import com.example.usos.StudentMethods.Subject;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
+import javafx.scene.chart.BarChart;
+import javafx.scene.chart.PieChart;
+import javafx.scene.chart.XYChart;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
@@ -16,15 +24,33 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.net.URL;
+import java.util.List;
+import java.util.ResourceBundle;
 
-public class StudentHomepageController {
+public class StudentHomepageController implements Initializable {
     @FXML private Button logOut;
     @FXML private AnchorPane anchorPane;
     @FXML private Label usernameLabel;
     @FXML private Label usernameLabel1;
+    @FXML private BarChart<String, Double> avgGradesChart;
 
     //------------------------------------
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
 
+        String name = UserData.getInstance().getStudent().getName();
+        usernameLabel.setText(name);
+        usernameLabel1.setText(name);
+
+        List<Subject> subjects = UserData.getInstance().getStudent().getSubjects();
+        XYChart.Series<String,Double> series = new XYChart.Series<>();
+        for(Subject subject : subjects){
+            series.getData().add(new XYChart.Data<>(subject.getSubjectName(),subject.getAverageGrade()));
+        }
+      avgGradesChart.getData().add(series);
+
+    }
     //----------------------
     @FXML
     private void changeNodes(String fxml) throws IOException {
@@ -72,4 +98,6 @@ public class StudentHomepageController {
     public void showMyData(ActionEvent actionEvent) throws IOException {
         changeNodes("com/example/usos/data.fxml");
     }
+
+
 }
