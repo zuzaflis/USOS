@@ -28,6 +28,10 @@ import java.net.URL;
 import java.util.List;
 import java.util.ResourceBundle;
 
+import static com.example.usos.GradesPane.serializeSubjects;
+import static com.example.usos.StudentDashboard.UserData.serializeStudent;
+
+
 public class StudentHomepageController implements Initializable {
     @FXML private Button logOut;
     @FXML private AnchorPane anchorPane;
@@ -79,6 +83,7 @@ public class StudentHomepageController implements Initializable {
     //----------------------------------------------------
     public void logOut(ActionEvent event) throws IOException{
         MainApp m = new MainApp();
+       serializeSubjects();
         m.changeScene("logIn.fxml",600,400);
 
     }

@@ -1,9 +1,10 @@
 package com.example.usos.StudentMethods;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Subject {
+public class Subject implements Serializable {
     private String subjectName;
     private Integer maxNumberOfStudents;
     private Integer numberOfStudents;

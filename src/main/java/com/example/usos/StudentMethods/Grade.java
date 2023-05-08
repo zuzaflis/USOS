@@ -1,6 +1,8 @@
 package com.example.usos.StudentMethods;
 
-public class Grade {
+import java.io.Serializable;
+
+public class Grade implements Serializable {
     private double value;
     private double weight;
 

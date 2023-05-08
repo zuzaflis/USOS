@@ -13,7 +13,7 @@ public class MainApp extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         stg = stage;
-       // stage.setResizable(false);
+       stage.setResizable(false);
         FXMLLoader fxmlLoader = new FXMLLoader(MainApp.class.getResource("logIn.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 600, 400);
         stage.setTitle("USOS");

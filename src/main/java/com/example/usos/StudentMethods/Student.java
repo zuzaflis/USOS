@@ -1,9 +1,12 @@
 package com.example.usos.StudentMethods;
 
+import com.example.usos.StudentDashboard.UserData;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
-public class Student implements Comparable<Student>{
+import java.io.*;
+
+public class Student implements Comparable<Student>, Serializable {
     private String name;
     private String lastName;
     private StudentCondition studentCondition;
@@ -12,12 +15,12 @@ public class Student implements Comparable<Student>{
     private double points;
     private ObservableList<Subject> subjects = FXCollections.observableArrayList();
 
-private ObservableList<Group> groups = FXCollections.observableArrayList();
+    private ObservableList<Group> groups = FXCollections.observableArrayList();
+
 
     public ObservableList<Group> getGroups() {
         return groups;
     }
-
 
     public ObservableList<Subject> getSubjects() {
         return subjects;
@@ -93,6 +96,7 @@ private ObservableList<Group> groups = FXCollections.observableArrayList();
     public int compareTo(Student student) {
         return this.lastName.compareTo(student.lastName); //zwraca 0 jesli sa rowne, ujemne gdy obecny jest mneijszy
     }
+
 }
 
 

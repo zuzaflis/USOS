@@ -14,6 +14,9 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectOutputStream;
 import java.net.URL;
 import java.util.Locale;
 import java.util.ResourceBundle;
@@ -35,15 +38,18 @@ public class SubjectsPaneController implements Initializable {
         }
     }
 
-
-
     //-----------------------------------------------------
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+
+
         nameColumn.setCellValueFactory(new PropertyValueFactory<Subject,String>("subjectName"));
         numberOfStudentsColumn.setCellValueFactory(new PropertyValueFactory<Subject,Integer>("numberOfStudents"));
         maxNumberOfStudentsColumn.setCellValueFactory(new PropertyValueFactory<Subject,Integer>("maxNumberOfStudents"));
         professorNameColumn.setCellValueFactory(new PropertyValueFactory<Subject,String>("TeacherName"));
+
+
+
         tableView.setItems(generateSubjects());
 
         FilteredList<Subject> filteredData = new FilteredList<>(generateSubjects(), b-> true);
@@ -91,6 +97,7 @@ public class SubjectsPaneController implements Initializable {
         subjects.addAll(subject1,subject2,subject3,subject4,subject5,subject6,subject7,subject8);
         return subjects;
     }
+//----------------------------------------------------------------------------------
 
 
     public void onSearch(ActionEvent actionEvent) {

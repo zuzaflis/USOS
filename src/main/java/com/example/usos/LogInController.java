@@ -12,6 +12,10 @@ import javafx.scene.control.TextField;
 
 import java.io.IOException;
 
+import static com.example.usos.StudentDashboard.UserData.deserializeStudent;
+import static com.example.usos.StudentDashboard.UserData.serializeStudent;
+
+
 public class LogInController {
 
     @FXML
@@ -39,14 +43,17 @@ public class LogInController {
             wrongInput.setText("Success");
 
             String usernameText = username.getText();
-           //String passwordText = password.getText();
-
             UserData.getInstance().setUsername(usernameText);
+
 
             Student student = new Student("Zuzanna", "Flis", StudentCondition.PRESENT,2002, 305.0, "309872");
             UserData.getInstance().setStudent(student);
-            GradesPane gradesPane = new GradesPane();
-            gradesPane.generateGrades();
+
+           //serializeStudent();
+            //deserializeStudent();
+
+          GradesPane gradesPane = new GradesPane();
+          gradesPane.deserializeSubjects();
 
 
             m.changeScene("studentHomepage.fxml",1280,800);

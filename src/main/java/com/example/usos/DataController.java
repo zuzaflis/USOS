@@ -2,19 +2,20 @@ package com.example.usos;
 
 import com.example.usos.StudentDashboard.UserData;
 import com.example.usos.StudentMethods.Student;
+import com.example.usos.StudentMethods.Subject;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.control.*;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.IOException;
+import java.io.*;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Optional;
 
 
-public class DataController {
+public class DataController implements Serializable{
     @FXML private Label nameLabel;
     @FXML private Label lastNameLabel;
     @FXML private Label albumLabel;
@@ -23,6 +24,7 @@ public class DataController {
     @FXML private Button changeInfoButton;
 
     public void initialize(){
+
         String name = UserData.getInstance().getStudent().getName();
         nameLabel.setText(name);
 
@@ -86,4 +88,5 @@ public class DataController {
         String username = UserData.getInstance().getUsername();
         usernameLabel.setText(username);
     }
+
 }

@@ -9,7 +9,10 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 
+import java.io.*;
 import java.net.URL;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.ResourceBundle;
 
 public class MySubjectsPaneController implements Initializable {
@@ -22,6 +25,7 @@ public class MySubjectsPaneController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+
         nameColumn.setCellValueFactory(new PropertyValueFactory<Subject,String>("subjectName"));
         numberOfStudentsColumn.setCellValueFactory(new PropertyValueFactory<Subject,Integer>("numberOfStudents"));
         professorNameColumn.setCellValueFactory(new PropertyValueFactory<Subject,String>("TeacherName"));
@@ -42,4 +46,33 @@ public class MySubjectsPaneController implements Initializable {
             UserData.getInstance().getStudent().getSubjects().remove(selectedSubject);
         }
     }
+
+    //------------------------------------
+    private void serializeSubject(){
+        try{
+            ObjectOutputStream outputStream = new ObjectOutputStream(new FileOutputStream("subjects.ser"));
+            List<Subject> subjectList=new ArrayList<>(UserData.getInstance().getStudent().getSubjects());
+            outputStream.writeObject(subjectList);
+            outputStream.close();
+            System.out.println("File saved at: " + new File("subjects.ser").getAbsolutePath());
+        }
+        catch (IOException e){
+            e.printStackTrace();
+        }
+    }
+    //------------------------------------
+    private void deserializeSubjects() {
+        try {
+            ObjectInputStream inputStream = new ObjectInputStream(new FileInputStream("subjects.ser"));
+            List<Subject> subjectList = (List<Subject>) inputStream.readObject();
+            inputStream.close();
+            UserData.getInstance().getStudent().getSubjects().setAll(subjectList);
+            System.out.println("File loaded from: " + new File("subjects.ser").getAbsolutePath());
+            for (Subject subject : subjectList) {
+                System.out.println(subject);
+            }
+        } catch (IOException | ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+}
 }
