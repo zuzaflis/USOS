@@ -1,16 +1,38 @@
 package com.example.usos.StudentMethods;
 
+import javax.persistence.*;
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.List;
 
+@Entity
+@Table(name = "Subject")
 public class Subject implements Serializable {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long subject_id;
+    @Column(name = "subject_name")
     private String subjectName;
+    @Column(name = "max_students")
     private Integer maxNumberOfStudents;
+    @Column(name = "number_of_students")
     private Integer numberOfStudents;
+    @Column(name = "teachers_name")
     private String TeacherName;
-
+    @OneToMany(mappedBy = "subject", cascade = CascadeType.ALL)
     private List<Grade> grades;
+    @ManyToMany
+    @JoinTable(
+            name = "subject_student",
+            joinColumns = @JoinColumn(name = "subject_id"),
+            inverseJoinColumns = @JoinColumn(name = "student_id"))
+    private List<Student> students = new ArrayList<>();
+
+    public Subject(){}
+    public void addStudent(Student student){
+        students.add(student);
+    }
     public Subject(String subjectName, Integer maxNumberOfStudents, Integer numberOfStudents, String teacherName) {
         this.subjectName = subjectName;
         this.maxNumberOfStudents = maxNumberOfStudents;
@@ -24,6 +46,22 @@ public class Subject implements Serializable {
         this.numberOfStudents = numberOfStudents;
         TeacherName = teacherName;
         this.grades = grades;
+    }
+
+    public Long getSubject_id() {
+        return subject_id;
+    }
+
+    public void setSubject_id(Long subject_id) {
+        this.subject_id = subject_id;
+    }
+
+    public void setGrades(List<Grade> grades) {
+        this.grades = grades;
+    }
+
+    public void setStudents(List<Student> students) {
+        this.students = students;
     }
 
     public void addGrade(Grade grade){
@@ -84,5 +122,9 @@ public class Subject implements Serializable {
             return avg / weightSum;
         }
         return 0;
+    }
+
+    public List<Student> getStudents() {
+        return students;
     }
 }

@@ -1,13 +1,25 @@
 package com.example.usos.StudentMethods;
 
 
+import javax.persistence.*;
 import java.util.*;
 
+@Entity
+@Table(name = "`Group`")
 public class Group {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long group_id;
+    @Column(name = "group_name")
     private String groupName;
+    @Column(name = "max_number_of_students")
     private int maxNumberOfStudents;
-
-    private List<Student> listOfStudents;
+    @ManyToMany(cascade = CascadeType.ALL)
+    @JoinTable(
+            name = "group_student",
+            joinColumns = @JoinColumn(name = "group_id"),
+            inverseJoinColumns = @JoinColumn(name = "student_id"))
+    private List<Student> listOfStudents = new ArrayList<>();
 
     public String getGroupName() {
         return groupName;
@@ -19,6 +31,18 @@ public class Group {
 
     public List<Student> getListOfStudents() {
         return listOfStudents;
+    }
+
+    public Long getGroup_id() {
+        return group_id;
+    }
+
+    public void setGroup_id(Long group_id) {
+        this.group_id = group_id;
+    }
+
+    public void setListOfStudents(List<Student> listOfStudents) {
+        this.listOfStudents = listOfStudents;
     }
 
     @Override

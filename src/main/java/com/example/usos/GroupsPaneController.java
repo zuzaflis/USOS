@@ -27,8 +27,6 @@ public class GroupsPaneController implements Initializable {
 
     @FXML ObservableList<Student> studentGroups;
 
-
-
     public void onAddGroup(ActionEvent actionEvent){
             Student myStudent = UserData.getInstance().getStudent();
         allGroups.getSelectionModel().selectedItemProperty().addListener(((observableValue, oldGroup, newGroup) -> {

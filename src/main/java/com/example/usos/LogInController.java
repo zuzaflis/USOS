@@ -27,13 +27,12 @@ public class LogInController {
     @FXML
     private PasswordField password;
 
-
-
     public void logIn(ActionEvent actionEvent) throws IOException {
         checkLogin();
     }
 
     private void checkLogin() throws IOException {
+
         MainApp m = new MainApp();
         if(username.getText().toString().equals("admin") && password.getText().toString().equals("admin")){
             wrongInput.setText("Success");
@@ -50,10 +49,11 @@ public class LogInController {
             UserData.getInstance().setStudent(student);
 
            //serializeStudent();
-            //deserializeStudent();
+            deserializeStudent();
 
           GradesPane gradesPane = new GradesPane();
-          gradesPane.deserializeSubjects();
+         // gradesPane.generateGrades();
+         // gradesPane.deserializeSubjects();
 
 
             m.changeScene("studentHomepage.fxml",1280,800);

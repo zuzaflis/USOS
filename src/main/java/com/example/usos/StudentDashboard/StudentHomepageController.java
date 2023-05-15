@@ -84,6 +84,7 @@ public class StudentHomepageController implements Initializable {
     public void logOut(ActionEvent event) throws IOException{
         MainApp m = new MainApp();
        serializeSubjects();
+        serializeStudent();
         m.changeScene("logIn.fxml",600,400);
 
     }

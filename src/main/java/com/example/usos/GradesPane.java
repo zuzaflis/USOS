@@ -2,6 +2,7 @@ package com.example.usos;
 
 import com.example.usos.StudentDashboard.UserData;
 import com.example.usos.StudentMethods.Grade;
+import com.example.usos.StudentMethods.Student;
 import com.example.usos.StudentMethods.Subject;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -30,29 +31,38 @@ public class GradesPane implements Initializable, Serializable {
         Subject subject9 = new Subject("Sieci Komputerowe", 20, 12, "Anna Kowalska");
         Subject subject10 = new Subject("Nowoczesne Technologie", 20, 12, "Adam Nowak");
 
-        UserData.getInstance().getStudent().addGrade(subject7,5.0,2.0);
-        UserData.getInstance().getStudent().addGrade(subject7,4.0,2.5);
+        Student student = UserData.getInstance().getStudent();
 
-        UserData.getInstance().getStudent().addGrade(subject8,4.0,2.0);
-        UserData.getInstance().getStudent().addGrade(subject8,5.0,2.5);
+        student.addGrade(subject7, 5.0, 2.0);
+        student.addGrade(subject7, 4.0, 2.5);
 
-        UserData.getInstance().getStudent().addGrade(subject9,2.0,3.0);
-        UserData.getInstance().getStudent().addGrade(subject9,4.0,2.5);
+        student.addGrade(subject8, 4.0, 2.0);
+        student.addGrade(subject8, 5.0, 2.5);
 
-        UserData.getInstance().getStudent().addGrade(subject10,3.5,2.0);
-        UserData.getInstance().getStudent().addGrade(subject10,4.0,3.5);
+        student.addGrade(subject9, 2.0, 3.0);
+        student.addGrade(subject9, 4.0, 2.5);
 
-        UserData.getInstance().getStudent().getSubjects().add(subject7);
-        UserData.getInstance().getStudent().getSubjects().add(subject8);
-        UserData.getInstance().getStudent().getSubjects().add(subject9);
-        UserData.getInstance().getStudent().getSubjects().add(subject10);
+        student.addGrade(subject10, 3.5, 2.0);
+        student.addGrade(subject10, 4.0, 3.5);
+
+        student.getSubjects().add(subject7);
+        subject7.getStudents().add(student);
+
+        student.getSubjects().add(subject8);
+        subject8.getStudents().add(student);
+
+        student.getSubjects().add(subject9);
+        subject9.getStudents().add(student);
+
+        student.getSubjects().add(subject10);
+        subject10.getStudents().add(student);
     }
     public void deserializeSubjects() {
         try {
             ObjectInputStream inputStream = new ObjectInputStream(new FileInputStream("grades.ser"));
             List<Subject> subjectList = (List<Subject>) inputStream.readObject();
             inputStream.close();
-            UserData.getInstance().getStudent().getSubjects().setAll(subjectList);
+            UserData.getInstance().getStudent().getSubjects().addAll(subjectList);
             System.out.println("File loaded from: " + new File("grades.ser").getAbsolutePath());
             for (Subject subject : subjectList) {
                 System.out.println(subject);

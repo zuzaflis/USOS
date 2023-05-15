@@ -2,6 +2,8 @@ package com.example.usos;
 
 import com.example.usos.StudentDashboard.UserData;
 import com.example.usos.StudentMethods.Subject;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -30,10 +32,12 @@ public class MySubjectsPaneController implements Initializable {
         numberOfStudentsColumn.setCellValueFactory(new PropertyValueFactory<Subject,Integer>("numberOfStudents"));
         professorNameColumn.setCellValueFactory(new PropertyValueFactory<Subject,String>("TeacherName"));
 
-        tableView.setItems(UserData.getInstance().getStudent().getSubjects());
+        ObservableList<Subject> observableList = FXCollections.observableList(UserData.getInstance().getStudent().getSubjects());
+        tableView.setItems(observableList);
     }
     private void refreshTable() {
-        tableView.setItems(UserData.getInstance().getStudent().getSubjects());
+        ObservableList<Subject> observableList = FXCollections.observableList(UserData.getInstance().getStudent().getSubjects());
+        tableView.setItems(observableList);
     }
 
     public void onRefresh(ActionEvent actionEvent) {
@@ -66,7 +70,7 @@ public class MySubjectsPaneController implements Initializable {
             ObjectInputStream inputStream = new ObjectInputStream(new FileInputStream("subjects.ser"));
             List<Subject> subjectList = (List<Subject>) inputStream.readObject();
             inputStream.close();
-            UserData.getInstance().getStudent().getSubjects().setAll(subjectList);
+            UserData.getInstance().getStudent().getSubjects().addAll(subjectList);
             System.out.println("File loaded from: " + new File("subjects.ser").getAbsolutePath());
             for (Subject subject : subjectList) {
                 System.out.println(subject);
