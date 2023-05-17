@@ -1,8 +1,6 @@
 package com.example.usos;
 
 import com.example.usos.StudentDashboard.UserData;
-import com.example.usos.StudentMethods.Student;
-import com.example.usos.StudentMethods.StudentCondition;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -11,10 +9,6 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 
 import java.io.IOException;
-
-import static com.example.usos.StudentDashboard.UserData.deserializeStudent;
-import static com.example.usos.StudentDashboard.UserData.serializeStudent;
-
 
 public class LogInController {
 
@@ -45,16 +39,7 @@ public class LogInController {
             UserData.getInstance().setUsername(usernameText);
 
 
-            Student student = new Student("Zuzanna", "Flis", StudentCondition.PRESENT,2002, 305.0, "309872");
-            UserData.getInstance().setStudent(student);
-
-           //serializeStudent();
-            deserializeStudent();
-
-          GradesPane gradesPane = new GradesPane();
-         // gradesPane.generateGrades();
-         // gradesPane.deserializeSubjects();
-
+        UserData.loadUserDataFromDatabase(139L);
 
             m.changeScene("studentHomepage.fxml",1280,800);
         } else {

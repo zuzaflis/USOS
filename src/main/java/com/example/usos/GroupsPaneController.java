@@ -1,9 +1,11 @@
 package com.example.usos;
 
+import com.example.usos.HibernateUtil.HibernateUtil;
 import com.example.usos.StudentDashboard.UserData;
 import com.example.usos.StudentMethods.Group;
 import com.example.usos.StudentMethods.Student;
 import com.example.usos.StudentMethods.StudentCondition;
+import com.example.usos.StudentMethods.Subject;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -12,6 +14,8 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.ListCell;
 import javafx.scene.control.ListView;
 import javafx.scene.control.Tooltip;
+import org.hibernate.Query;
+import org.hibernate.Session;
 
 
 import java.net.URL;
@@ -28,11 +32,13 @@ public class GroupsPaneController implements Initializable {
     @FXML ObservableList<Student> studentGroups;
 
     public void onAddGroup(ActionEvent actionEvent){
+
             Student myStudent = UserData.getInstance().getStudent();
         allGroups.getSelectionModel().selectedItemProperty().addListener(((observableValue, oldGroup, newGroup) -> {
             if(newGroup!=null && !newGroup.getStudents().contains(myStudent)){
 
                 newGroup.addStudent(myStudent);
+                myStudent.addGroup(newGroup);
 
 
                 ObservableList<Group> updatedGroup = FXCollections.observableArrayList();
@@ -79,32 +85,31 @@ public class GroupsPaneController implements Initializable {
 
         if(selectedGroup!= null){
             selectedGroup.removeStudent(UserData.getInstance().getStudent());
+            UserData.getInstance().getStudent().getGroups().remove(selectedGroup);
             myGroups.getItems().remove(selectedGroup);
             allGroups.refresh();
 
 
         }
     }
-    public void generateGroups(){
-        List<Student> students1= new ArrayList<>();
-        students1.add(new Student("Olek" ,"Kowalski", StudentCondition.PRESENT,2003,203.0,"213321"));
-        Group group1 = new Group("Grupa 1", students1,30);
-        allGroups.getItems().add(group1);
-
-
-        List<Student> students2= new ArrayList<>();
-        students2.add(new Student("Aleksander" ,"Kowalski", StudentCondition.PRESENT,2003,203.0,"213321"));
-        //students2.add(UserData.getInstance().getStudent());
-        Group group2 = new Group("Grupa 2", students2,30);
-        allGroups.getItems().add(group2);
-
+    public ObservableList<Group> generateGroups(){
+        try(Session session = HibernateUtil.getSessionFactory().openSession()){
+            Query<Group> query = session.createQuery("SELECT  g FROM Group g  JOIN FETCH g.listOfStudents", Group.class);
+            List<Group> groupList = query.list();
+            ObservableList<Group> groups = FXCollections.observableArrayList(groupList);
+            return groups;
+        } catch (Exception e ){
+            e.printStackTrace();
+        }
+            return null;
     }
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        ObservableList<Group> groups = FXCollections.observableArrayList();
-        allGroups.setItems(groups);
-        generateGroups();
 
+        ObservableList<Group> myGroups = FXCollections.observableArrayList(UserData.getInstance().getGroups());
+
+        allGroups.setItems(generateGroups());
+       // myGroups.setAll(myGroups);
 
         allGroups.setCellFactory(listView ->  new ListCell<>() {
             @Override

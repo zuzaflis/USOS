@@ -14,13 +14,14 @@ public class Group {
     private String groupName;
     @Column(name = "max_number_of_students")
     private int maxNumberOfStudents;
-    @ManyToMany(cascade = CascadeType.ALL)
+    @ManyToMany(cascade = CascadeType.ALL,fetch = FetchType.EAGER)
     @JoinTable(
             name = "group_student",
             joinColumns = @JoinColumn(name = "group_id"),
             inverseJoinColumns = @JoinColumn(name = "student_id"))
     private List<Student> listOfStudents = new ArrayList<>();
 
+    public Group() {}
     public String getGroupName() {
         return groupName;
     }

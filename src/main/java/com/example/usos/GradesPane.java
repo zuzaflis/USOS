@@ -25,64 +25,6 @@ public class GradesPane implements Initializable, Serializable {
     @FXML
     private ChoiceBox<Subject> subjectChoice;
 
-    public void generateGrades(){
-        Subject subject7 = new Subject("MMNT", 20,15,"Magdalena Kaczmarek");
-        Subject subject8 = new Subject("Algebra", 20,1,"Karolina Zgred");
-        Subject subject9 = new Subject("Sieci Komputerowe", 20, 12, "Anna Kowalska");
-        Subject subject10 = new Subject("Nowoczesne Technologie", 20, 12, "Adam Nowak");
-
-        Student student = UserData.getInstance().getStudent();
-
-        student.addGrade(subject7, 5.0, 2.0);
-        student.addGrade(subject7, 4.0, 2.5);
-
-        student.addGrade(subject8, 4.0, 2.0);
-        student.addGrade(subject8, 5.0, 2.5);
-
-        student.addGrade(subject9, 2.0, 3.0);
-        student.addGrade(subject9, 4.0, 2.5);
-
-        student.addGrade(subject10, 3.5, 2.0);
-        student.addGrade(subject10, 4.0, 3.5);
-
-        student.getSubjects().add(subject7);
-        subject7.getStudents().add(student);
-
-        student.getSubjects().add(subject8);
-        subject8.getStudents().add(student);
-
-        student.getSubjects().add(subject9);
-        subject9.getStudents().add(student);
-
-        student.getSubjects().add(subject10);
-        subject10.getStudents().add(student);
-    }
-    public void deserializeSubjects() {
-        try {
-            ObjectInputStream inputStream = new ObjectInputStream(new FileInputStream("grades.ser"));
-            List<Subject> subjectList = (List<Subject>) inputStream.readObject();
-            inputStream.close();
-            UserData.getInstance().getStudent().getSubjects().addAll(subjectList);
-            System.out.println("File loaded from: " + new File("grades.ser").getAbsolutePath());
-            for (Subject subject : subjectList) {
-                System.out.println(subject);
-            }
-        } catch (IOException | ClassNotFoundException e) {
-            e.printStackTrace();
-        }
-    }
-
-    public static void serializeSubjects() {
-        try {
-            ObjectOutputStream outputStream = new ObjectOutputStream(new FileOutputStream("grades.ser"));
-            List<Subject> subjectList=new ArrayList<>(UserData.getInstance().getStudent().getSubjects());
-            outputStream.writeObject(subjectList);
-            outputStream.close();
-            System.out.println("File saved at: " + new File("grades.ser").getAbsolutePath());
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
     public void onReset(ActionEvent actionEvent) {
         mySubjects.getItems().setAll(UserData.getInstance().getStudent().getSubjects());
     }
@@ -90,7 +32,6 @@ public class GradesPane implements Initializable, Serializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
-       // deserializeSubjects();
         //choice Box
         ObservableList<Subject> subjects = FXCollections.observableArrayList();
         subjects.addAll(UserData.getInstance().getStudent().getSubjects());
@@ -123,13 +64,10 @@ public class GradesPane implements Initializable, Serializable {
             }
         });
 
-        //serializeSubjects();
-        //mySubjects.getItems().addAll(UserData.getInstance().getStudent().getSubjects());
 
     }
 
     public void onSort(ActionEvent actionEvent) {
-        //Comparator<Grade> gradeAvgComparator = Comparator.comparing(Subject.getAverageGrade());
         ObservableList<Subject> subjects = mySubjects.getItems();
         FXCollections.sort(subjects, Comparator.comparingDouble(Subject::getAverageGrade).reversed());
     }

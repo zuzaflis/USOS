@@ -8,8 +8,7 @@ import java.util.List;
 @Entity
 @Table(name = "Student")
 public class Student implements Comparable<Student>, Serializable {
-    public Student() {
-    }
+    public Student() {}
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -28,15 +27,19 @@ public class Student implements Comparable<Student>, Serializable {
     private String albumNumber;
     @Column(name = "points")
     private double points;
-    @ManyToMany(mappedBy = "students")
+    @ManyToMany(mappedBy = "students",cascade = CascadeType.ALL,fetch = FetchType.EAGER)
     private List<Subject> subjects = new ArrayList<>();
-    @ManyToMany(mappedBy = "listOfStudents")
+    @ManyToMany(mappedBy = "listOfStudents",cascade = CascadeType.ALL)
     private List<Group> groups = new ArrayList<>();
     @OneToMany(mappedBy = "student", cascade = CascadeType.ALL)
     private List<Grade> grades = new ArrayList<>();
 
+    //----------------------------------------------------
     public void addSubject(Subject subject){
         subjects.add(subject);
+    }
+    public void addGroup(Group group){
+        groups.add(group);
     }
     public List<Group> getGroups() {
         return groups;
@@ -50,6 +53,10 @@ public class Student implements Comparable<Student>, Serializable {
         Grade grade = new Grade(value, weight);
         subject.addGrade(grade);
         grades.add(grade);
+    }
+    public void addGrade(Subject subject1, Grade grade1) {
+        subject1.addGrade(grade1);
+        grades.add(grade1);
     }
 
     public Long getStudent_id() {
@@ -141,11 +148,6 @@ public class Student implements Comparable<Student>, Serializable {
     @Override
     public int compareTo(Student student) {
         return this.lastName.compareTo(student.lastName); //zwraca 0 jesli sa rowne, ujemne gdy obecny jest mneijszy
-    }
-
-    public void addGrade(Subject subject1, Grade grade1) {
-        subject1.addGrade(grade1);
-        grades.add(grade1);
     }
 }
 

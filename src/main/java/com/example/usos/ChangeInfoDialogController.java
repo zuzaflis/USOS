@@ -18,7 +18,6 @@ public class ChangeInfoDialogController {
     private Student student;
 
     public ChangeInfoDialogController() {}
-        // Default constructor
 
     public ChangeInfoDialogController(Student student) {
         this.student = student;

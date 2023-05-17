@@ -48,12 +48,12 @@
    <left>
       <AnchorPane prefHeight="637.0" prefWidth="251.0" style="-fx-background-color: #cfbfab;" BorderPane.alignment="CENTER">
          <children>
-            <Button fx:id="gradesButton" layoutX="11.0" layoutY="49.0" mnemonicParsing="false" onAction="#showGrades" prefHeight="48.0" prefWidth="224.0" style="-fx-background-color: #e6cba8;" text="GRADES" />
-            <Button fx:id="subjectsButton" layoutX="11.0" layoutY="116.0" mnemonicParsing="false" onAction="#showSubjects" prefHeight="48.0" prefWidth="224.0" style="-fx-background-color: #e6cba8;" text="SUBJECTS" />
-            <Button fx:id="groupsButton" layoutX="11.0" layoutY="188.0" mnemonicParsing="false" onAction="#showGroups" prefHeight="48.0" prefWidth="224.0" style="-fx-background-color: #e6cba8;" text="GROUPS" />
-            <Button fx:id="scheduleButton" layoutX="11.0" layoutY="261.0" mnemonicParsing="false" onAction="#showSchedule" prefHeight="48.0" prefWidth="224.0" style="-fx-background-color: #e6cba8;" text="SCHEDULE" />
-            <Button fx:id="mySubjectsButton" layoutX="11.0" layoutY="330.0" mnemonicParsing="false" onAction="#showMySubjects" prefHeight="48.0" prefWidth="224.0" style="-fx-background-color: #e6cba8;" text="MY SUBJECTS" />
-            <Button fx:id="myDataButton" layoutX="11.0" layoutY="400.0" mnemonicParsing="false" onAction="#showMyData" prefHeight="48.0" prefWidth="224.0" style="-fx-background-color: #e6cba8;" text="DATA" />
+            <Button fx:id="gradesButton" layoutX="11.0" layoutY="49.0" mnemonicParsing="false" onAction="#showGrades" prefHeight="48.0" prefWidth="224.0" style="-fx-background-color: #e6cba8;" text="OCENY" textFill="WHITE" />
+            <Button fx:id="subjectsButton" layoutX="11.0" layoutY="116.0" mnemonicParsing="false" onAction="#showSubjects" prefHeight="48.0" prefWidth="224.0" style="-fx-background-color: #e6cba8;" text="PRZEDMIOTY" textFill="WHITE" />
+            <Button fx:id="groupsButton" layoutX="11.0" layoutY="188.0" mnemonicParsing="false" onAction="#showGroups" prefHeight="48.0" prefWidth="224.0" style="-fx-background-color: #e6cba8;" text="GRUPY" textFill="WHITE" />
+            <Button fx:id="scheduleButton" layoutX="11.0" layoutY="261.0" mnemonicParsing="false" onAction="#showSchedule" prefHeight="48.0" prefWidth="224.0" style="-fx-background-color: #e6cba8;" text="OPINIE PRZEDMIOTÓW" textFill="WHITE" />
+            <Button fx:id="mySubjectsButton" layoutX="11.0" layoutY="330.0" mnemonicParsing="false" onAction="#showMySubjects" prefHeight="48.0" prefWidth="224.0" style="-fx-background-color: #e6cba8;" text="MOJE PRZEDMIOTY" textFill="WHITE" />
+            <Button fx:id="myDataButton" layoutX="11.0" layoutY="400.0" mnemonicParsing="false" onAction="#showMyData" prefHeight="48.0" prefWidth="224.0" style="-fx-background-color: #e6cba8;" text="INFORMACJE" textFill="WHITE" />
          </children></AnchorPane>
    </left>
    <right>
@@ -73,11 +73,11 @@
                   <Image url="@../../../../../../../../../Users/T14/Desktop/usoslogo1_plain_white_4000.gif" />
                </image>
             </ImageView>
-            <Button fx:id="logOut" alignment="CENTER" layoutX="1149.0" layoutY="33.0" mnemonicParsing="false" onAction="#logOut" prefHeight="30.0" prefWidth="88.0" style="-fx-background-color: #e6b16c;" text="Log Out" />
+            <Button fx:id="logOut" alignment="CENTER" layoutX="1149.0" layoutY="33.0" mnemonicParsing="false" onAction="#logOut" prefHeight="30.0" prefWidth="88.0" style="-fx-background-color: #e6b16c;" text="Wyloguj się" textFill="WHITE" />
             <ImageView fitHeight="46.0" fitWidth="57.0" layoutX="1067.0" layoutY="28.0" pickOnBounds="true" preserveRatio="true" />
-            <Label fx:id="usernameLabel1" layoutX="1039.0" layoutY="34.0" prefHeight="27.0" prefWidth="113.0" text="Label">
+            <Label fx:id="usernameLabel1" layoutX="1039.0" layoutY="35.0" prefHeight="27.0" prefWidth="113.0" text="Label" textOverrun="CLIP">
                <font>
-                  <Font size="24.0" />
+                  <Font name="Baskerville Old Face" size="24.0" />
                </font>
             </Label>
          </children>
@@ -98,7 +98,7 @@
             </Label>
             <Pane fx:id="panedo" layoutX="166.0" layoutY="175.0" prefHeight="287.0" prefWidth="498.0">
                <children>
-                  <BarChart fx:id="avgGradesChart" layoutY="-50.0" stylesheets="@style.css" title="Your Average Grades:">
+                  <BarChart fx:id="avgGradesChart" layoutY="-50.0" stylesheets="@style.css" title="Średnie oceny:">
                     <xAxis>
                       <CategoryAxis side="BOTTOM" />
                     </xAxis>

@@ -19,22 +19,22 @@
       </ImageView>
    </top>
    <center>
-      <AnchorPane prefHeight="213.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+      <AnchorPane prefHeight="208.0" prefWidth="509.0" BorderPane.alignment="CENTER">
          <children>
-            <Label layoutX="132.0" layoutY="26.0" prefHeight="34.0" prefWidth="130.0" text="Username" textFill="#1b1414">
+            <Label layoutX="132.0" layoutY="26.0" prefHeight="34.0" prefWidth="130.0" text="Login:" textFill="#1b1414">
                <font>
                   <Font size="18.0" />
                </font>
             </Label>
-            <Label layoutX="132.0" layoutY="80.0" prefHeight="42.0" prefWidth="86.0" text="Password" textFill="#1d1b1e">
+            <Label layoutX="132.0" layoutY="80.0" prefHeight="42.0" prefWidth="86.0" text="Hasło:" textFill="#1d1b1e">
                <font>
                   <Font size="18.0" />
                </font>
             </Label>
-            <PasswordField fx:id="password" layoutX="239.0" layoutY="83.0" prefHeight="35.0" prefWidth="194.0" promptText="Password" />
-            <TextField fx:id="username" layoutX="239.0" layoutY="26.0" prefHeight="33.0" prefWidth="194.0" promptText="Username" />
+            <PasswordField fx:id="password" layoutX="239.0" layoutY="83.0" prefHeight="35.0" prefWidth="194.0" promptText="Hasło" />
+            <TextField fx:id="username" layoutX="239.0" layoutY="26.0" prefHeight="33.0" prefWidth="194.0" promptText="Login" />
             <Label fx:id="wrongInput" layoutX="248.0" layoutY="137.0" textFill="#e40b0b" />
-            <Button fx:id="logIn" layoutX="300.0" layoutY="154.0" mnemonicParsing="false" onAction="#logIn" style="-fx-background-color: #c0bbc7;" text="Log In" textFill="#fffafa" />
+            <Button fx:id="logIn" layoutX="291.0" layoutY="154.0" mnemonicParsing="false" onAction="#logIn" style="-fx-background-color: #c0bbc7;" text="Zaloguj się" textFill="#fffafa" />
          </children>
       </AnchorPane>
    </center>

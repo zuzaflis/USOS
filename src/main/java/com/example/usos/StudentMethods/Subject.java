@@ -3,7 +3,6 @@ package com.example.usos.StudentMethods;
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.ArrayList;
-import java.util.Calendar;
 import java.util.List;
 
 @Entity
@@ -20,8 +19,19 @@ public class Subject implements Serializable {
     private Integer numberOfStudents;
     @Column(name = "teachers_name")
     private String TeacherName;
-    @OneToMany(mappedBy = "subject", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "subject", cascade = CascadeType.ALL,fetch = FetchType.EAGER)
     private List<Grade> grades;
+    @OneToMany(mappedBy = "subject")
+    private List<Rating> ratings = new ArrayList<>();
+
+    public List<Rating> getRatings() {
+        return ratings;
+    }
+
+    public void setRatings(List<Rating> ratings) {
+        this.ratings = ratings;
+    }
+
     @ManyToMany
     @JoinTable(
             name = "subject_student",
@@ -29,7 +39,11 @@ public class Subject implements Serializable {
             inverseJoinColumns = @JoinColumn(name = "student_id"))
     private List<Student> students = new ArrayList<>();
 
+    //---------------------------------------------------
     public Subject(){}
+    public void addRating(Rating rating){
+        ratings.add(rating);
+    }
     public void addStudent(Student student){
         students.add(student);
     }

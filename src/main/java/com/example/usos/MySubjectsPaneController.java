@@ -48,35 +48,8 @@ public class MySubjectsPaneController implements Initializable {
         Subject selectedSubject = tableView.getSelectionModel().getSelectedItem();
         if(selectedSubject!= null){
             UserData.getInstance().getStudent().getSubjects().remove(selectedSubject);
+            selectedSubject.getStudents().remove(UserData.getInstance().getStudent());
         }
     }
 
-    //------------------------------------
-    private void serializeSubject(){
-        try{
-            ObjectOutputStream outputStream = new ObjectOutputStream(new FileOutputStream("subjects.ser"));
-            List<Subject> subjectList=new ArrayList<>(UserData.getInstance().getStudent().getSubjects());
-            outputStream.writeObject(subjectList);
-            outputStream.close();
-            System.out.println("File saved at: " + new File("subjects.ser").getAbsolutePath());
-        }
-        catch (IOException e){
-            e.printStackTrace();
-        }
-    }
-    //------------------------------------
-    private void deserializeSubjects() {
-        try {
-            ObjectInputStream inputStream = new ObjectInputStream(new FileInputStream("subjects.ser"));
-            List<Subject> subjectList = (List<Subject>) inputStream.readObject();
-            inputStream.close();
-            UserData.getInstance().getStudent().getSubjects().addAll(subjectList);
-            System.out.println("File loaded from: " + new File("subjects.ser").getAbsolutePath());
-            for (Subject subject : subjectList) {
-                System.out.println(subject);
-            }
-        } catch (IOException | ClassNotFoundException e) {
-            e.printStackTrace();
-        }
-}
 }
