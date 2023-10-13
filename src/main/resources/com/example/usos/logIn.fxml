@@ -14,7 +14,7 @@
    <top>
       <ImageView fitHeight="192.0" fitWidth="231.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
          <image>
-            <Image url="@../../../../../../../../../Users/T14/Desktop/1.jpg" />
+            <Image url="login_pic.jpg" />
          </image>
       </ImageView>
    </top>

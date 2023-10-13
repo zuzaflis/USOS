@@ -43,7 +43,6 @@ public class AdminHomepageController implements Initializable {
     private ObservableList<Student> generateStudents(){
         ObservableList<Student> students = FXCollections.observableArrayList();
 
-        // Create some sample students
         Student student1 = new Student("John", "Doe", StudentCondition.PRESENT, 1999,  85.0,"123456");
         Student student2 = new Student("Jane", "Doe", StudentCondition.SICK, 2000,  92.5, "654321");
         Student student3 = new Student("Bob", "Smith", StudentCondition.ABSENT, 1998,  78.3,"246810");
